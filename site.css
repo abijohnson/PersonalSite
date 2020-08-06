@@ -264,15 +264,15 @@ body {
   #navbar-nav {
     list-style-type: none;
     text-align: center;
-    margin-left: 23px;
-    display: inline-block;
+    display: inline;
   }
 
   #navbar-nav li a {
     text-align: center;
+    justify-content: space-around;
+    align-items: center;
     font-weight: bold;
     float: none;
-    align-content: center;
     text-decoration: none;
     font-size: 25px;
     color: white;
@@ -356,6 +356,9 @@ body {
 
   #about-1-col {
     margin-left: 0px;
+    display: block;
+    justify-content: space-around;
+    align-items: center;
   }
 
   #about-2 {
@@ -363,7 +366,7 @@ body {
   }
 
   #about-2-col {
-    margin-right: 50px;
+    margin-right: 0px;
   }
   /*RESUME-MOBILE*/
   #resume-name {
@@ -441,8 +444,7 @@ body {
   }
 
   #outer-container {
-    border: 5px solid white;
-    border-radius: 10px;
+    border: none;
   }
 
   #inner-container {
