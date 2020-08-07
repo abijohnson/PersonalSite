@@ -85,10 +85,29 @@ body {
   align-items: center;
 }
 
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: none;
+  padding: 4px;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 #resume-title {
   margin-top: 30px;
   font-size: 35px;
   font-weight: 600;
+  background-color: none;
+  border: none;
+  background: none;
+  display: block;
+  outline: none;
 }
 
 #resume-lang-list li {
@@ -113,15 +132,16 @@ body {
   font-style: normal;
 }
 
-#resume-subsubtitle {
+#resume-projects {
   list-style-type: none;
   margin-top: 8px;
   font-size: 15px;
+  display: block;
   font-style: italic;
   font-weight: 450;
 }
 
-#resume-subsubtitle a {
+#resume-projects a {
   list-style-type: none;
   margin-top: 8px;
   font-size: 15px;
@@ -135,6 +155,40 @@ body {
   margin-top: 10px;
   font-size: 20px;
   font-weight: normal;
+}
+
+#resume-experience {
+  list-style-type: none;
+  margin-top: 8px;
+  font-size: 15px;
+  display: block;
+  font-style: italic;
+  font-weight: 450;
+}
+
+#resume-experience a {
+  list-style-type: none;
+  margin-top: 8px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 450;
+}
+
+#resume-experience-desc {
+  width: 600px;
+  font-style: normal;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#resume-education {
+  list-style-type: none;
+  margin-top: 8px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 450;
+  display: block;
 }
 
 #azure-link {
@@ -256,8 +310,8 @@ body {
     font-family: "Rubik", sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
     background-color: #8fd0d3;
   }
 
@@ -285,7 +339,7 @@ body {
   }
 
   #intro-text {
-    margin-top: 120px;
+    margin-top: 100px;
     font-weight: bold;
     font-size: 50px;
   }
@@ -332,7 +386,7 @@ body {
 
   #about-text-row2 {
     float: right;
-    margin-top: 80px;
+    margin-top: 60px;
     font-size: 20px;
     text-align: right;
   }
@@ -346,7 +400,8 @@ body {
   #about-1 {
     width: 300px;
     height: 300px;
-    margin-top: 60px;
+    margin-top: 40px;
+    align-content: center;
   }
 
   #about-container {
@@ -356,9 +411,9 @@ body {
 
   #about-1-col {
     margin-left: 0px;
-    display: block;
+    display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-content: center;
   }
 
   #about-2 {
@@ -378,26 +433,37 @@ body {
     display: block;
     justify-content: space-around;
     align-items: center;
+    display: none;
+  }
+
+  .arrow {
+    display: inline-block;
   }
 
   #resume-title {
     margin-top: 30px;
     font-size: 35px;
     font-weight: 600;
+    float: left;
+    text-align: left;
+    cursor: pointer;
   }
 
-  #resume-lang-list li {
+  #resume-lang-list {
     list-style-type: none;
     margin-top: 8px;
     font-weight: 450;
     font-size: 25px;
+    display: none;
+    width: 600px;
   }
 
-  #resume-tools-list li {
+  #resume-tools-list {
     list-style-type: none;
     margin-top: 8px;
     font-weight: 450;
     font-size: 25px;
+    display: none;
   }
 
   #resume-subtitle {
@@ -408,12 +474,31 @@ body {
     font-style: normal;
   }
 
-  #resume-subsubtitle {
+  #resume-projects {
     list-style-type: none;
     margin-top: 8px;
     font-size: 15px;
     font-style: italic;
     font-weight: 450;
+    display: none;
+  }
+
+  #resume-experience {
+    list-style-type: none;
+    margin-top: 8px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 450;
+    display: none;
+  }
+
+  #resume-education {
+    list-style-type: none;
+    margin-top: 8px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 450;
+    display: none;
   }
 
   #resume-subsubtitle a {
@@ -426,7 +511,15 @@ body {
 
   #resume-project-desc {
     font-style: normal;
-    width: 200px;
+    width: 300px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  #resume-experience-desc {
+    font-style: normal;
+    width: 300px;
     margin-top: 10px;
     font-size: 20px;
     font-weight: normal;

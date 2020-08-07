@@ -24,7 +24,7 @@
         <div class="container" id="inner-container">
 
       <div class="row">
-        <h3 id="resume-title">Languages</h3>
+        <button id="resume-title" onclick="displayLangList()">Languages<i class="arrow down"></i></button>
       </div>
       <div class="row">
         <ul id="resume-lang-list">
@@ -32,17 +32,14 @@
           <li>C++</li>
           <li>JavaScript</li>
           <li>Python</li>
-        </ul>
-        <ul id="resume-lang-list">
           <li>CSS</li>
           <li>HTML</li>
           <li>Kotlin</li>
           <li>SQL</li>
-        </ul>
       </div>
 
       <div class="row">
-        <h3 id="resume-title">Tools & Frameworks</h3>
+        <button id="resume-title" onclick="displayToolsList()">Tools and Frameworks<i class="arrow down"></i></button>
       </div>
 
       <div class="row">
@@ -60,10 +57,10 @@
       </div>
 
       <div class="row">
-        <h3 id="resume-title">Projects</h3>
+        <button id="resume-title" onclick="displayProjects()">Projects<i class="arrow down"></i></button>
       </div>
       <div class="row">
-        <ul id="resume-subsubtitle">
+        <ul id="resume-projects">
           <li id="resume-subtitle">HelpAlong</li>
           <li>Senior Capstone Group Project</li>
           <li>January 2020 - June 2020</li>
@@ -81,14 +78,14 @@
 
 
       <div class="row">
-        <h3 id="resume-title">Work Experience</h3>
+        <button id="resume-title" onclick="displayExperience()">Work Experience<i class="arrow down"></i></button>
       </div>
       <div class="row">
-        <ul id="resume-subsubtitle">
+        <ul id="resume-experience">
             <li id="resume-subtitle">Customer Experience Manager</li>
             <li>Michaels Arts and Crafts</li>
             <li>April 2017 - August 2018</li>
-            <li id="resume-project-desc">
+            <li id="resume-experience-desc">
                 Managed associates effectively and promoted a
                 healthy and efficient work environment, overcame challenges and worked around large
                 hurdles, and established communication and positive
@@ -100,10 +97,10 @@
 
 
       <div class="row">
-        <h3 id="resume-title">Education</h3>
+        <button id="resume-title" onclick="displayEducation()">Education<i class="arrow down"></i></button>
       </div>
       <div class="row">
-        <ul id="resume-subsubtitle">
+        <ul id="resume-education">
             <li id="resume-subtitle">Bachelor of Science</li>
             <li>Field of study: Computer Science</li>
             <li>Western Oregon University</li>
