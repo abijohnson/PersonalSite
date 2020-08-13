@@ -10,41 +10,37 @@ $(document).ready(function () {
     var windowSize = $(window).width();
 
     if (windowSize <= 700) {
-      document.getElementById("navbar-mobile").innerHTML =
-        '<ol id="navbar-nav">' +
-        '<li><a href="index.html" id="the-nav">Abi Johnson</a></li>' +
-        '<li><a href="contact.html" id="the-nav">Contact</a></li>' +
-        '<li><a href="about.html" id="the-nav">About</a></li>' +
-        '<li><a href="resume.html" id="the-nav">Resume</a></li>' +
-        "</ol>";
+      var h = document.getElementById("home-link");
+      h.style.display = "block";
+      var n = document.getElementById("nav-title");
+      n.style.display = "none";
 
-      var x = document.getElementById("navbar");
-      x.style.display = "none";
+      var m = document.getElementById("open-colors");
+      m.style.display = "none";
     } else {
+      var h = document.getElementById("home-link");
+      h.style.display = "none";
+
+      var m = document.getElementById("open-colors");
+      m.style.display = "block";
+
+      var n = document.getElementById("nav-title");
+      n.style.display = "block";
+
       var x = document.getElementById("resume-lang-list");
-      if (x.style.display != null) {
-        x.style.display = "block";
-      }
+      x.style.display = "block";
 
       var y = document.getElementById("resume-tools-list");
-      if (y.style.display != null) {
-        y.style.display = "block";
-      }
+      y.style.display = "block";
 
       var z = document.getElementById("resume-projects");
-      if (z.style.display != null) {
-        z.style.display = "block";
-      }
+      z.style.display = "block";
 
       var a = document.getElementById("resume-experience");
-      if (a.style.display != null) {
-        a.style.display = "block";
-      }
+      a.style.display = "block";
 
       var b = document.getElementById("resume-education");
-      if (b.style.display != null) {
-        b.style.display = "block";
-      }
+      b.style.display = "block";
     }
   }
   checkWidth();
@@ -259,6 +255,9 @@ const homeBox2 = document.getElementById("home-box-link2");
 const footerBg = document.getElementById("open-colors");
 const footerTxt = document.querySelector(".open-colors-btn");
 const footerIcon = document.getElementById("open-colors-icon");
+const resumeTitles = document.querySelectorAll(".resume-titles");
+const azureLink = document.getElementById("azure-link");
+const contactLinks = document.querySelectorAll("#contactLinked");
 
 const navBar = document.getElementById("navbar-nav");
 const theNavBar = navBar.querySelectorAll("#nav-link");
@@ -282,15 +281,35 @@ function setColors() {
   //set text1
   document.body.style.color = text1Color;
 
+  if (azureLink != null) {
+    azureLink.style.color = text2Color;
+  }
+
+  if (resumeTitles != null) {
+    var y = resumeTitles.length;
+    while (y--) {
+      resumeTitles[y].style.color = text1Color;
+    }
+  }
+
   //set text2
   navtext1.style.color = text2Color;
-  homeBox1.style.color = text2Color;
-  homeBox1.style.outlineColor = text2Color;
-  homeBox2.style.color = text2Color;
-  homeBox2.style.outlineColor = text2Color;
+
+  if (homeBox1 != null) {
+    homeBox1.style.color = text2Color;
+    homeBox1.style.outlineColor = text2Color;
+    homeBox2.style.color = text2Color;
+    homeBox2.style.outlineColor = text2Color;
+  }
+
   var i = theNavBar.length;
   while (i--) {
     theNavBar[i].style.color = text2Color;
+  }
+
+  var z = contactLinks.length;
+  while (z--) {
+    contactLinks[z].style.color = text1Color;
   }
 
   //set accent
@@ -302,8 +321,6 @@ function setColors() {
   footerBg.style.background = accentColor;
   footerIcon.style.backgroundColor = accentColor;
   footerTxt.style.background = accentColor;
-
-  //generateBtn.style.backgroundColor = accentColor;
 }
 
 function updateTextUI(index) {

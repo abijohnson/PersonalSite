@@ -16,7 +16,17 @@
     />
   </head>
   <body>
-    <div id="navbar"></div>
+    <div id="navbar">
+      <a href="index.html" id="nav-title">Abi Johnson</a> 
+      <ul id="navbar-nav"> 
+      <li><a href="index.html" id="home-link">Home</a></li> 
+      <li><a href="contact.html" id="nav-link">Contact</a></li> 
+      <li><a href="about.html" id="nav-link">About</a></li> 
+      <li><a href="resume.html" id="nav-link">Resume</a></li> 
+      </ul>
+    </div>
+
+
     <div class="row" id="resume-name">
         Abigail L. Johnson
       </div>
@@ -24,7 +34,7 @@
         <div class="container" id="inner-container">
 
       <div class="row">
-        <button id="resume-title" onclick="displayLangList()">Languages<i class="arrow down"></i></button>
+        <button id="resume-title" class="resume-titles" onclick="displayLangList()">Languages<i class="arrow down"></i></button>
       </div>
       <div class="row">
         <ul id="resume-lang-list">
@@ -39,7 +49,7 @@
       </div>
 
       <div class="row">
-        <button id="resume-title" onclick="displayToolsList()">Tools & Frameworks<i class="arrow down"></i></button>
+        <button id="resume-title" class="resume-titles" onclick="displayToolsList()">Tools & Frameworks<i class="arrow down"></i></button>
       </div>
 
       <div class="row">
@@ -57,7 +67,7 @@
       </div>
 
       <div class="row">
-        <button id="resume-title" onclick="displayProjects()">Projects<i class="arrow down"></i></button>
+        <button id="resume-title" class="resume-titles" onclick="displayProjects()">Projects<i class="arrow down"></i></button>
       </div>
       <div class="row">
         <ul id="resume-projects">
@@ -78,7 +88,7 @@
 
 
       <div class="row">
-        <button id="resume-title" onclick="displayExperience()">Work Experience<i class="arrow down"></i></button>
+        <button id="resume-title" class="resume-titles"  onclick="displayExperience()">Work Experience<i class="arrow down"></i></button>
       </div>
       <div class="row">
         <ul id="resume-experience">
@@ -97,7 +107,7 @@
 
 
       <div class="row">
-        <button id="resume-title" onclick="displayEducation()">Education<i class="arrow down"></i></button>
+        <button id="resume-title" class="resume-titles"  onclick="displayEducation()">Education<i class="arrow down"></i></button>
       </div>
       <div class="row">
         <ul id="resume-education">
@@ -111,7 +121,196 @@
 </div>
 
     </div>
-    <div id="color-bar"></div>
+    <div class="color-container">
+      <div class="colors-popup">
+        <div class="colors">
+
+
+          <div class="color" id="bodyPanel">
+            <h2>Hex</h2>
+            <h3>Body</h3>
+            <div class="sliders">
+              <span>Hue</span>
+              <input
+                type="range"
+                min="0"
+                max="360"
+                step="1"
+                name="hue"
+                class="hue-input"
+                data-hue="0"
+              />
+              <span>Brightness</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="brightness"
+                class="bright-input"
+                data-bright="0"
+              />
+              <span>Saturation</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="saturation"
+                class="sat-input"
+                data-sat="0"
+              />
+            </div>
+          </div>
+    
+    
+          <div class="color">
+            <h2>Hex</h2>
+            <h3>Text Color 1</h3>
+            <div class="sliders">
+              <span>Hue</span>
+              <input
+                type="range"
+                min="0"
+                max="360"
+                step="1"
+                name="hue"
+                class="hue-input"
+                data-hue="1"
+              />
+              <span>Brightness</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="brightness"
+                class="bright-input"
+                data-bright="1"
+              />
+              <span>Saturation</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="saturation"
+                class="sat-input"
+                data-sat="1"
+              />
+            </div>
+          </div>
+    
+    
+          <div class="color">
+            <h2>Hex</h2>
+            <h3>Text Color 2</h3>
+            <div class="sliders">
+              <span>Hue</span>
+              <input
+                type="range"
+                min="0"
+                max="360"
+                step="1"
+                name="hue"
+                class="hue-input"
+                data-hue="2"
+              />
+              <span>Brightness</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="brightness"
+                class="bright-input"
+                data-bright="2"
+              />
+              <span>Saturation</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="saturation"
+                class="sat-input"
+                data-sat="2"
+              />
+            </div>
+          </div>
+    
+    
+          <div class="color">
+            <h2>Hex</h2>
+            <h3>Accents</h3>
+            <div class="sliders">
+              <span>Hue</span>
+              <input
+                type="range"
+                min="0"
+                max="360"
+                step="1"
+                name="hue"
+                class="hue-input"
+                data-hue="3"
+              />
+              <span>Brightness</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="brightness"
+                class="bright-input"
+                data-bright="3"
+              />
+              <span>Saturation</span>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                name="saturation"
+                class="sat-input"
+                data-sat="3"
+              />
+            </div>
+          </div>
+    
+    
+        </div>
+  
+    
+        <div class="panel">
+          <div class="reset-panel">
+            <button class="generate" onclick="originalColors();"><i class="fas fa-sync"></i></button>
+            <p>Reset</p>
+          </div>
+          <div class="random-panel">
+            <button class="generate" onclick="randomColors();"><i class="far fa-grin-tongue-squint"></i></button>
+            <p>Random</p>
+          </div>
+          <div class="save-panel">
+            <button class="generate" id="save-btn" onclick="closeColors();"><i class="fa fa-check"></i></button>
+            <p>Save</p>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <footer id="open-colors">
+  
+      <p id="open-colors-txt">
+      <button class="open-colors-btn" onclick="openColors();" >Would you like to change the colors?</button>
+      <button class="open-colors-btn" id="open-colors-icon" onclick="openColors();" ><i class="fas fa-palette"></i></button></p>
+      
+    
+    </footer>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
@@ -123,6 +322,6 @@
     integrity="sha512-yocoLferfPbcwpCMr8v/B0AB4SWpJlouBwgE0D3ZHaiP1nuu5djZclFEIj9znuqghaZ3tdCMRrreLoM8km+jIQ=="
     crossorigin="anonymous"
   ></script>
-    <script src="script.js"></script>    
+    <script src="script.js"></script>      
   </body>
 </html>
