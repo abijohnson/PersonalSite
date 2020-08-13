@@ -213,7 +213,6 @@ body {
 }
 
 #outer-container {
-  border: 5px solid white;
   border-radius: 10px;
 }
 
@@ -300,7 +299,7 @@ body {
 #about-2 {
   width: 300px;
   height: 300px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 #about-2-col {
@@ -739,10 +738,13 @@ input[type="range"] {
 
 #open-colors-txt {
   float: right;
-  color: white;
   font-size: 18px;
   margin-right: 30px;
   margin-top: 3px;
+}
+
+#colors-bar-txt {
+  color: #e9ffff;
 }
 
 .open-colors-btn {
@@ -752,7 +754,7 @@ input[type="range"] {
   background: #40a0a5;
   border: none;
   font-family: "Rubik", sans-serif;
-  color: white;
+  color: #e9ffff;
   cursor: pointer;
 }
 
@@ -763,6 +765,6 @@ input[type="range"] {
   background: #40a0a5;
   border: none;
   font-family: "Rubik", sans-serif;
-  color: white;
+  color: #e9ffff;
   cursor: pointer;
 }

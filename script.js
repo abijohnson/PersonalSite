@@ -253,11 +253,12 @@ const navtext1 = document.getElementById("nav-title");
 const homeBox1 = document.getElementById("home-box-link1");
 const homeBox2 = document.getElementById("home-box-link2");
 const footerBg = document.getElementById("open-colors");
-const footerTxt = document.querySelector(".open-colors-btn");
+const footerTxt = document.getElementById("colors-bar-txt");
 const footerIcon = document.getElementById("open-colors-icon");
 const resumeTitles = document.querySelectorAll(".resume-titles");
 const azureLink = document.getElementById("azure-link");
 const contactLinks = document.querySelectorAll("#contactLinked");
+const resumeBorder = document.getElementById("outer-container");
 
 const navBar = document.getElementById("navbar-nav");
 const theNavBar = navBar.querySelectorAll("#nav-link");
@@ -307,20 +308,27 @@ function setColors() {
     theNavBar[i].style.color = text2Color;
   }
 
-  var z = contactLinks.length;
-  while (z--) {
-    contactLinks[z].style.color = text1Color;
+  if (contactLinks != null) {
+    var z = contactLinks.length;
+    while (z--) {
+      contactLinks[z].style.color = text1Color;
+    }
   }
 
-  //set accent
-  var x = generateBtn.length;
-  while (x--) {
-    generateBtn[x].style.backgroundColor = accentColor;
+  if (generateBtn != null) {
+    var x = generateBtn.length;
+    while (x--) {
+      generateBtn[x].style.backgroundColor = accentColor;
+    }
   }
+  //set accent
 
   footerBg.style.background = accentColor;
   footerIcon.style.backgroundColor = accentColor;
   footerTxt.style.background = accentColor;
+
+  footerTxt.style.color = text2Color;
+  footerIcon.style.color = text2Color;
 }
 
 function updateTextUI(index) {
