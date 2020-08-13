@@ -256,6 +256,9 @@ function hslControls(e) {
 const navtext1 = document.getElementById("nav-title");
 const homeBox1 = document.getElementById("home-box-link1");
 const homeBox2 = document.getElementById("home-box-link2");
+const footerBg = document.getElementById("open-colors");
+const footerTxt = document.querySelector(".open-colors-btn");
+const footerIcon = document.getElementById("open-colors-icon");
 
 const navBar = document.getElementById("navbar-nav");
 const theNavBar = navBar.querySelectorAll("#nav-link");
@@ -291,10 +294,15 @@ function setColors() {
   }
 
   //set accent
-  var i = generateBtn.length;
-  while (i--) {
-    generateBtn[i].style.backgroundColor = accentColor;
+  var x = generateBtn.length;
+  while (x--) {
+    generateBtn[x].style.backgroundColor = accentColor;
   }
+
+  footerBg.style.background = accentColor;
+  footerIcon.style.backgroundColor = accentColor;
+  footerTxt.style.background = accentColor;
+
   //generateBtn.style.backgroundColor = accentColor;
 }
 
@@ -335,6 +343,25 @@ function resetInputs() {
     }
   });
   setColors();
+}
+
+// const openColors = document.querySelector(".open-colors-btn");
+
+const colorContainer = document.querySelector(".color-container");
+
+// //Event Listeners
+// openColors.addEventListener("click", openPalette);
+// closeColors.addEventListener("click", closePalette);
+
+function openColors() {
+  const popup = colorContainer.children[0];
+  colorContainer.classList.add("active");
+  popup.classList.add("active");
+}
+function closeColors() {
+  const popup = colorContainer.children[0];
+  colorContainer.classList.remove("active");
+  popup.classList.add("remove");
 }
 
 originalColors();
